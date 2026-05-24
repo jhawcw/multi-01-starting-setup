@@ -10,10 +10,10 @@
 
     docker build -t goals-node .
 
-    docker run --name goals-backend --rm -d --network goals-network goals-node
+    docker run --name goals-backend --rm -d -p 80:80 --network goals-network goals-node
 
 ## Starting frontend
 
     docker build -t goals-react .
 
-    docker run --name goals-frontend --rm -d --network goals-network -p 3000:3000 goals-react
+    docker run --name goals-frontend --rm -d -p 3000:3000 goals-react

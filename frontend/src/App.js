@@ -14,7 +14,7 @@ function App() {
       setIsLoading(true)
 
       try {
-        const response = await fetch("http://backend/goals")
+        const response = await fetch("http://localhost:80/goals")
 
         const resData = await response.json()
 
@@ -36,7 +36,7 @@ function App() {
     setIsLoading(true)
 
     try {
-      const response = await fetch("http://backend/goals", {
+      const response = await fetch("http://localhost:80/goals", {
         method: "POST",
         body: JSON.stringify({
           text: goalText,
@@ -72,7 +72,7 @@ function App() {
     setIsLoading(true)
 
     try {
-      const response = await fetch("http://backend/goals/" + goalId, {
+      const response = await fetch("http://localhost:80/goals/" + goalId, {
         method: "DELETE",
       })
 
