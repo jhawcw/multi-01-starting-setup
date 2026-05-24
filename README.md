@@ -4,7 +4,7 @@
 
 ## Starting database
 
-    docker run --name mongodb --rm -d --network goals-network mongo
+    docker run --name mongodb --rm -d -v data:/data/db --network goals-network mongo
 
 ## Starting backend
 
