@@ -4,7 +4,7 @@
 
 ## Starting database
 
-    docker run --name mongodb --rm -d -v data:/data/db --network goals-network mongo
+    docker run --name mongodb --rm -d -v data:/data/db --network goals-network -e MONGO_INITDB_ROOT_USERNAME=jason -e MONGO_INITDB_ROOT_PASSWORD=secret mongo
 
 ## Starting backend
 
